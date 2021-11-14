@@ -35,13 +35,16 @@
 			</div>
 
 			<div class="login">
-				<form>
+				{% block content %}
+				<form enctype="multipart/form-data" method="post" action="Login">
+					{% csrf_token %}
 					<label for="chk" aria-hidden="true">Login</label>
 					<input type="name" name="UName" placeholder="User Name" required="">
 					<input type="email" name="email" placeholder="Email" required="">
 					<input type="password" name="pswd" placeholder="Password" required="">
 					<button>Login</button>
 				</form>
+		          {% endblock %}
 			</div>
 	</div>
 </body>
