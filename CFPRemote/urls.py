@@ -19,6 +19,6 @@ from django.urls import include, path
 
 urlpatterns = [
     path('', include('CFPRemoteApp.urls')),
-    path('CFPRemoteApp/', admin.site.urls),
+    path('CFPRemoteApp/', include('CFPRemoteApp.urls')),
     path('admin/', admin.site.urls),
 ]

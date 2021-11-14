@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure--#fx7kztif^=jig8^*!k!k!1mwz$v!=@qp0h7n4+4oqtsd=(8h
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*',]
 
 
 # Application definition
@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'whitenoise.runserver_nostatic',
+    'CFPRemoteApp.apps.CfpremoteappConfig',
 ]
 
 MIDDLEWARE = [
@@ -77,11 +79,11 @@ WSGI_APPLICATION = 'CFPRemote.wsgi.application'
 
 DATABASES = {
      'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'spambyter_db',
-        'USER': 'postgres',
-        'PASSWORD': 'sanpost',
-        'HOST': 'localhost',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd23vkkh0jgbmgf',
+        'USER': 'wynglwnhufaaoe',
+        'PASSWORD': '8a474791633ce1a3fd3c34b8ccfe4d4d58f8a5665623f6f1b6ae2911ee142429',
+        'HOST': 'ec2-34-250-19-18.eu-west-1.compute.amazonaws.com',
         'PORT': '5432',
     }
 }
