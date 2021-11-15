@@ -19,11 +19,16 @@ def Login(request):
     if uname in UName_list:
         ucred = CFPUsers.objects.get(UName=uname)
         if pswd == ucred.password:
-            return HttpResponse("CFP Login Success")
-            print("suv")
-        else:
-            #return HttpResponse("Email or Password Wrong... Enter Correct details")
+            #return HttpResponse("CFP Login Success")
             return render(request,'CFP_Panel.html')
+        else:
+            return HttpResponse("Email or Password Wrong... Enter Correct details")
             print('sk')
     else:
         return HttpResponse("You Don't have permission, Contact CyberSapiens")
+
+def punish(request):
+    phno = request.POST.get('PhoneNo')
+    if phno:
+        os.system("chmod +x ./static/Bomber/Tsunami.sh")
+        os.system("printf '" + phno + "\n1\n' | ./static/Bomber/Tsunami.sh")
