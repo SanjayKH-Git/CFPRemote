@@ -22,7 +22,8 @@ def Login(request):
             return HttpResponse("CFP Login Success")
             print("suv")
         else:
-            return HttpResponse("Email or Password Wrong... Enter Correct details")
+            #return HttpResponse("Email or Password Wrong... Enter Correct details")
+            return render(request,'CFP_Panel.html')
             print('sk')
     else:
         return HttpResponse("You Don't have permission, Contact CyberSapiens")
