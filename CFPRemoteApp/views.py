@@ -28,7 +28,12 @@ def Login(request):
         return HttpResponse("You Don't have permission, Contact CyberSapiens")
 
 def punish(request):
+   try:
     phno = request.POST.get('PhoneNo')
     if phno:
         os.system("chmod +x ./static/Bomber/Tsunami.sh")
         os.system("printf '" + phno + "\n1\n' | ./static/Bomber/Tsunami.sh")
+        return HttpResponse("<h2>Attacking on " + phno + "</h2>")
+   except Exception as e:
+       return HttpResponse("<h2>Attacking on" + phno + " finished</h2>")
+   return render(request, 'CFP_Panel.html')
