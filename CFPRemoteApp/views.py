@@ -15,7 +15,6 @@ def Login(request):
     # retrieving PhoneNo from SpamUsers Model
     UName_list = [u.UName for u in CFPUsers.objects.all()]
     # check if  exist in SpamUser Model
-    print("worki")
     if uname in UName_list:
         ucred = CFPUsers.objects.get(UName=uname)
         if pswd == ucred.password:
@@ -23,7 +22,6 @@ def Login(request):
             return render(request,'CFP_Panel.html')
         else:
             return HttpResponse("Email or Password Wrong... Enter Correct details")
-            print('sk')
     else:
         return HttpResponse("You Don't have permission, Contact CyberSapiens")
 
