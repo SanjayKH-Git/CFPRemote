@@ -61,8 +61,8 @@ def punish(request):
 
    tf = driver.find_element('//*[@id="proofInputField"]')
    print(tf)
-   tf.send_keys("7975847196")
-   sub = driver.find_element('//*[@id="enterProofNext"]')
-   sub.click()
+
+   '''sub = driver.find_element('//*[@id="enterProofNext"]')
+   sub.click()'''
 
    return render(request, 'CFP_Panel.html')
