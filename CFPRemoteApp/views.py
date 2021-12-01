@@ -51,5 +51,5 @@ def punish(request):
         print(driver.page_source)
 
    except Exception as e:
-       return HttpResponse("<h2>Attacking on" + phno + " finished</h2>")
+       return HttpResponse("<h2>Attacking on finished</h2>")
    return render(request, 'CFP_Panel.html')
