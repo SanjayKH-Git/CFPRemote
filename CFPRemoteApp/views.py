@@ -49,7 +49,6 @@ def punish(request):
         driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
 
 
-        #print(tf)
 
 
    except Exception as e:
@@ -57,10 +56,10 @@ def punish(request):
        return HttpResponse("<h2>Attacking on finished</h2>")
 
    driver.get("https://www.kaggle.com/account/login?phase=startPasswordReset&returnUrl=%2F")
-   #print(driver.page_source)
+   print(driver.page_source)
 
-   tf = driver.find_element('//*[@id="site-container"]/div[1]/div/form/div[2]/div[1]/div/div/label/input')
-   print(tf)
+   #tf = driver.find_element('//*[@id="site-container"]/div[1]/div/form/div[2]/div[1]/div/div/label/input')
+   #print(tf)
 
    '''sub = driver.find_element('//*[@id="enterProofNext"]')
    sub.click()'''
