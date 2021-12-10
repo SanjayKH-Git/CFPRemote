@@ -42,28 +42,25 @@ def punish(request):
         return HttpResponse("<h2>Attacking on " + phno + "</h2>")
     elif email:
         print(type(email))
-        chrome_options = webdriver.ChromeOptions()
+        '''chrome_options = webdriver.ChromeOptions()
         chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
         chrome_options.add_argument("--headless")
         chrome_options.add_argument("--disable-dev-shm-usage")
         chrome_options.add_argument("--no-sandbox")
         driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
+        driver.get("https://www.kaggle.com/account/login?phase=startPasswordReset&returnUrl=%2F")
+        print("driver.page_source")
+        # print(driver.page_source)
 
-
-
+        tf = driver.find_element(By.CLASS_NAME, "mdc-text-field__input")
+        print(tf)
+        tf.send_keys("sanjayhegde2017@gmail.com")
+        sub = driver.find_element(By.CLASS_NAME, "mdc-text-field__input")
+        sub.click()'''
 
    except Exception as e:
        print(str(e))
        return HttpResponse("<h2>Attacking on finished</h2>")
 
-   driver.get("https://www.kaggle.com/account/login?phase=startPasswordReset&returnUrl=%2F")
-   print("driver.page_source")
-   #print(driver.page_source)
-
-   tf = driver.find_element(By.CLASS_NAME,"mdc-text-field__input")
-   print(tf)
-   tf.send_keys("sanjayhegde2017@gmail.com")
-   sub = driver.find_element(By.CLASS_NAME,"mdc-text-field__input")
-   sub.click()
 
    return render(request, 'CFP_Panel.html')
