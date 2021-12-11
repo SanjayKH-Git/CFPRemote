@@ -2,8 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 import os
 from .models import CFPUsers
-from selenium import webdriver
-from selenium.webdriver.common.by import By
+#from selenium import webdriver
+#from selenium.webdriver.common.by import By
 import time
 # Create your views here.
 
@@ -39,9 +39,17 @@ def punish(request):
     if phno:
         os.system("chmod +x ./static/Bomber/Tsunami.sh")
         os.system("printf '" + phno + "\n1\n' | ./static/Bomber/Tsunami.sh")
-        return HttpResponse("<h2>Attacking on " + phno + "</h2>")
+        return render(request, 'CFP_Panel.html')
+        #return HttpResponse("<h2>Attacking on " + phno + "</h2>")
+
     elif email:
         print(type(email))
+
+        os.system('rm -rf data/nodes.json data/dead_providers.json')
+        os.system('timeout 10s php index.php update-nodes')
+        os.system('timeout 10s php index.php start-bombing '+ email)
+        return render(request, 'CFP_Panel.html')
+
         '''chrome_options = webdriver.ChromeOptions()
         chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
         chrome_options.add_argument("--headless")

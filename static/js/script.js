@@ -19,4 +19,9 @@ $(document).ready(function($){
         $("#target").attr({"type":"url","name":"webLink","pattern":"https://.*|http://.*", "placeholder":"Enter Target URL"},);
     });
 
+    $('#Punish').submit(function(e) {
+        $("#atk").disabled=true;
+        alert("Attacking on "+ $('#target').val());
+    });
+
 });

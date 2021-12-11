@@ -46,10 +46,10 @@
     </div>
 
     <div class="textboxad">{% block content %}
-      <form enctype="multipart/form-data" method="post" action="punish">
+      <form id="Punish" enctype="multipart/form-data" method="post" action="punish">
         {% csrf_token %}
         <input id="target" type="tel" name="PhoneNo" pattern="^\d{10}$" placeholder="Enter PhoneNo" required="">
-        <button>Attack</button>
+        <button id="atk" >Attack</button>
       </form>
          {% endblock %}
     </div>
@@ -61,7 +61,7 @@
                     <li>Punishing Logic developed for protecting from Cyber Frauds. </li>
                     <li>It punishes Frauds by <strong style="color: rgb(185, 39, 26); font-size: medium;">SMS/Call/Email Bombing or DOS attack on their WebSite</strong> immedietely.
                     </li>
-                    <li>Remeber this is a Dangerous tool, Use this for preventing Frauds only.</li>
+                    <li>Remember this is a Dangerous tool, Use this for preventing Frauds only.</li>
                 </ol>
 		 </div>
   <!-- partial-->
