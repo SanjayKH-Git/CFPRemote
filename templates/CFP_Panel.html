@@ -46,10 +46,13 @@
     </div>
 
     <div class="textboxad">{% block content %}
-      <form enctype="multipart/form-data" method="post" action="punish">{% csrf_token %}
+      <form enctype="multipart/form-data" method="post" action="punish">
+        {% csrf_token %}
         <input id="target" type="tel" name="PhoneNo" pattern="^\d{10}$" placeholder="Enter PhoneNo" required="">
         <button>Attack</button>
-      </form>{% endblock %}</div>
+      </form>
+         {% endblock %}
+    </div>
   </div>
    <div class="Rules">
                 <h4>About CFP</h4>
