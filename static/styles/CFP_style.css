@@ -431,6 +431,10 @@ button:hover{
 	background: #6d44b8;
 }
 
+.Bomb{
+ background:#aa7bff;
+ display:None;
+}
 .Rules
 {
   height: auto;

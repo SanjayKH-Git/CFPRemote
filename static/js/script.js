@@ -21,7 +21,8 @@ $(document).ready(function($){
 
     $('#Punish').submit(function(e) {
         $("#atk").disabled=true;
-        alert("Attacking on "+ $('#target').val());
+        alert("Attacking on "+ $('#target').val() +"\n Please don't Refresh the Page \n Wait for few seconds to complete ");
+        $('.Bomb').css('display','block')
     });
 
 });
