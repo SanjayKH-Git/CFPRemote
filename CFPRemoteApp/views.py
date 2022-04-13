@@ -38,7 +38,7 @@ def punish(request):
 
     if phno:
         os.system("chmod +x ./static/Bomber/Tsunami.sh")
-        os.system("printf '" + phno + "\n1\n' | ./static/Bomber/Tsunami.sh")
+        os.system("printf '" + phno + "\n15\n' | ./static/Bomber/Tsunami.sh")
         return render(request, 'CFP_Panel.html')
         #return HttpResponse("<h2>Attacking on " + phno + "</h2>")
 
