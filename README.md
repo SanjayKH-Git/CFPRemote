@@ -20,6 +20,9 @@ Cyber Fraud Prevention (CPF) Remote is the Remote app for punishing Frauds.
 [HTML]: https://img.shields.io/badge/-HTML-E34F26?style=flat-square&logo=html5&logoColor=white
 [CSS.js]: https://img.shields.io/badge/-CSS3-1572B6?style=flat-square&logo=CSS3&logoColor=white
 [JavaScript]: https://img.shields.io/badge/-JavaScript-6d0f87?style=flat-square&logo=JavaScript&logoColor=white
+
+>>***_Bombing Tool developed with PHP & enclosed in Django Web App_***
+
 **Complete Project Report** -> 
 
 📌[<img alt="Click to View Documentation" width="40px" target=”_blank” src="https://upload.wikimedia.org/wikipedia/commons/6/66/Google_Docs_2020_Logo.svg" />](https://docs.google.com/document/d/12xwJnyFQrmpIUWvp7BGvKgpsRPLkNcW3Y7o6mT8SWvU/edit)📌
