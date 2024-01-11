@@ -12,6 +12,7 @@ Cyber Fraud Prevention (CPF) Remote is the Remote app for punishing Frauds.
   >> ![HTML][HTML]
   >> ![CSS][CSS.js]
   >> ![JavaScript][JavaScript]
+  >> ![ShellScript][ShellScript]
   
 [Python]: https://img.shields.io/badge/-Python-07065c?style=flat-square&logo=python&logoColor=white
 [Django]: https://img.shields.io/badge/-Django-22293E?style=flat-square&logo=django&logoColor=green
@@ -20,8 +21,9 @@ Cyber Fraud Prevention (CPF) Remote is the Remote app for punishing Frauds.
 [HTML]: https://img.shields.io/badge/-HTML-E34F26?style=flat-square&logo=html5&logoColor=white
 [CSS.js]: https://img.shields.io/badge/-CSS3-1572B6?style=flat-square&logo=CSS3&logoColor=white
 [JavaScript]: https://img.shields.io/badge/-JavaScript-6d0f87?style=flat-square&logo=JavaScript&logoColor=white
+[ShellScript]:  https://img.shields.io/badge/-ShellScript-32293E?style=flat-square&logo=Shell&logoColor=white
 
->>***_Bombing Tool developed with PHP & enclosed in Django Web App_***
+>>***_Email Bombing Logic developed with PHP & Text Message Bombing developed with Shell Scripting enclosed in Django Web App_***
 
 **Complete Project Report** -> 
 
